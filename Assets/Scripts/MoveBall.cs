@@ -16,6 +16,7 @@ public class MoveBall : MonoBehaviour
         rigidbody.angularDrag += 0.5f;
     }
 
+	// used for collision detection
     void OnCollisionEnter2D(Collision2D otherObject)
     {
         Vector3 force = new Vector3(0, 0, 0)

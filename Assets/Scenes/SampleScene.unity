@@ -311,7 +311,6 @@ GameObject:
   - component: {fileID: 1881131649}
   - component: {fileID: 1881131648}
   - component: {fileID: 1881131650}
-  - component: {fileID: 1881131651}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -407,27 +406,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!50 &1881131651
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1881131647}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.6399999
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &2799352288292821267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -493,6 +471,11 @@ PrefabInstance:
     - target: {fileID: 2799352289959963763, guid: e9751b6290c93af41a438b9b18195d0f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799352289299814158, guid: e9751b6290c93af41a438b9b18195d0f,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

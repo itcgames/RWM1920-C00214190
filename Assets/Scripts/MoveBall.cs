@@ -38,6 +38,15 @@ public class MoveBall : MonoBehaviour
                 x = (transform.position.x + otherObject.rigidbody.position.x) / 2.0f,
                 y = (transform.position.y + otherObject.rigidbody.position.y) / 2.0f
             };
+            float weight = otherObject.rigidbody.mass;
+            if(weight > 10)
+            {
+                force *= -1.0f;
+            }
+            else
+            {
+                force *= 10.0f;
+            }
             otherObject.rigidbody.AddForceAtPosition(force, collisionPoint);
             rigidbody.AddForceAtPosition(-force, collisionPoint);
         }

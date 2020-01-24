@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class MoveBall : MonoBehaviour
 {
+    //bool for if sound should be played
+    bool playSound;
     // rigidbody of ball
     private Rigidbody2D rigidbody;
     void Start()
     {
+        playSound = true;
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -21,6 +24,11 @@ public class MoveBall : MonoBehaviour
     {
         if (otherObject.rigidbody != null)
         {
+            if (playSound)
+            {
+                transform.parent.GetComponent<AudioSource>().Play();
+                playSound = false;
+            }
             Vector3 force = new Vector3(0, 0, 0)
             {
                 x = otherObject.transform.position.x < transform.position.x ? 0.25f : -0.25f
@@ -33,5 +41,10 @@ public class MoveBall : MonoBehaviour
             otherObject.rigidbody.AddForceAtPosition(force, collisionPoint);
             rigidbody.AddForceAtPosition(-force, collisionPoint);
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (!playSound) playSound = true;
     }
 }

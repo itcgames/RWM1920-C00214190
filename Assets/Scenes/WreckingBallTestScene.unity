@@ -440,6 +440,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WreckingBall
       objectReference: {fileID: 0}
+    - target: {fileID: 966582150209774293, guid: e9751b6290c93af41a438b9b18195d0f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 966582150209774282, guid: e9751b6290c93af41a438b9b18195d0f,
         type: 3}
       propertyPath: m_LocalPosition.x
